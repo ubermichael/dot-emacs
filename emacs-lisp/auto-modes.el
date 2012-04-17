@@ -7,7 +7,6 @@
       (append
        (list         
         (cons "\\.css$" 'css-mode)
-        (cons "\\.dwt"  'nxml-mode)
         (cons "\\.log$" 'compilation-mode)        
         (cons "\\.mxi$" 'nxml-mode)
         (cons "\\.php$" 'php-mode)
@@ -19,8 +18,10 @@
         (cons "\\.xsl$" 'nxml-mode)
         (cons "\\.xslt$" 'nxml-mode)
         (cons "\\.xmap$" 'nxml-mode)
+	(cons "\\.t$"    'cperl-mode)
         )
        auto-mode-alist))
+(defalias 'perl-mode 'cperl-mode)
 
 ;;; auto-modes.el ends here
 (provide 'auto-modes)

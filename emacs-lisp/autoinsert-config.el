@@ -23,8 +23,11 @@
 (define-auto-insert "\\.tex"  "latex-template.tex")
 (define-auto-insert "\\.bib"  "latex-template.bib")
 (define-auto-insert "\\.xslt" "xsl-transform.xslt")
+(define-auto-insert "\\.xsl" "xsl-transform.xslt")
 (define-auto-insert "\\.xml" "xml-template.xml")
 (define-auto-insert "\\.html" "xhtml-template.html")
+(define-auto-insert "\\.dtd" "dtd-template.dtd")
+
 
 (provide 'autoinsert-config)
 ;;; autoinsert-config.el ends here

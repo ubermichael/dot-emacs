@@ -7,15 +7,13 @@
 (setq user-mail-address "michael@negativespace.net")
 (setq default-directory "~/Documents/" )
 
-(desktop-save-mode 1)
-
 ;; highlighting
 (show-paren-mode t)
 (transient-mark-mode t)
 (blink-cursor-mode -1)
 
 ;; don't open new frames -- doesn't work.
-(setq one-buffer-one-frame-mode nil)
+(setq one-buffer-one-frame-mode t)
 
 ;; Don't add new lines to the end of a file when using down-arrow key 
 (setq next-line-add-newlines nil) 
@@ -45,9 +43,6 @@
 
 ;; allow f-b to expand to foo-bar
 (partial-completion-mode 1)
-
-;; minibuffer resize -- apparently broken with v22.0.50.1, v23.1.1
-;; (resize-minibuffer-mode 1)
 
 ;; Do only one line scrolling.
 (setq scroll-step 1)
@@ -84,7 +79,7 @@
 (custom-set-variables '(indent-tabs-mode nil))
 
 ;; Set the variable default-tab-width.
-(setq tab-width 4)
+(setq tab-width 2)
 
 ;; Smarter split-window
 (defadvice split-window-vertically

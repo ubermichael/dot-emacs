@@ -1,7 +1,4 @@
 ;;; Dot-emacs.el ---
-;; $Id: dot-emacs.el 7 2010-04-30 18:18:56Z michael $
-;; Author: Michael S. Joyce <michael@negativespace.net>
-;; Keywords: 
 
 (global-set-key "\C-c\C-u" 'eval-current-buffer)
 ;; (require 'mac-key-mode)
@@ -9,33 +6,39 @@
 
 (setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
 
-(if (string= (expand-file-name ".") "/Users/michael/Documents/dot-emacs")
+(if (string= (expand-file-name ".") "/Users/michael/Documents/dotemacs")
     (progn (setq load-path  (cons (expand-file-name ".") load-path))
-           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dot-emacs/emacs-lisp") load-path))
-           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dot-emacs/emacs-local") load-path)))
+           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-lisp") load-path))
+           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-local") load-path))
+           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-templates") load-path)))
   (progn (setq load-path (cons (expand-file-name "~/.emacs-lisp") load-path))
-         (setq load-path (cons (expand-file-name "~/.emacs-local") load-path))))
+         (setq load-path (cons (expand-file-name "~/.emacs-local") load-path))
+         (setq load-path (cons (expand-file-name "~/.emacs-templates") load-path))))
 
-(load "auto-modes")(defalias 'perl-mode 'cperl-mode)
+(load "auto-modes")
 (load "config")
 (load "custom-functions")
 (load "global-keys")
 ;; mode-hooks AFTER global-keys: don't blow away the local-set-keys
 (load "mode-hooks")
 (load "autoinsert-config")
-(load "rnc-mode")
 
-;; add nxml mode automagically
-(load "nxml/rng-auto")
-(load "nxhtml/nxhtml-autoload")
-(load "tt-mode")
-
-;; xquery mode is goodness.
-(load "xquery-mode")
-
+; -------------------------------------
+; locally installed emacs modes.
 (load "ascii-table")
-
-(load "drupal-mode")
+; (load "css-mode")
+; (load "drupal-mode")
+;(load "find-recursive")
+(load "lorem-ipsum")
+;(load "lua-mode")
+;(load "maxframe")
+(load "nxhtml/nxhtml-autoload")
+(load "nxml/rng-auto")
+;(load "pabbrev")
+;(load "rnc-mode")
+;(load "scss-mode")
+;(load "sql-indent")
+(load "tt-mode")
 
 ;;; dot-emacs.el ends here
 (custom-set-variables
@@ -43,7 +46,6 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(gud-gdb-command-name "gdb --annotate=1")
  '(indent-tabs-mode nil)
  '(large-file-warning-threshold nil)
  '(tool-bar-mode nil nil (tool-bar))

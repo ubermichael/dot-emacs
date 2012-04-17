@@ -8,7 +8,6 @@ use warnings;
 use version; our $VERSION = qv(0.0_1);
 
 use Data::Dumper; $Data::Dumper::Indent = 1;
-use Encode;
 
 use Test::More;
 my $builder = Test::More->builder;
