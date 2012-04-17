@@ -1,0 +1,17 @@
+body, td {
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+}
+body {
+    max-width: 40em;
+    margin: 2em;    
+}    
+p.says cite {
+    color: #b8860b;
+}
+p.says {
+    margin-left: 1em;    
+    margin-top: 0;    
+    margin-bottom: 0;    
+}
