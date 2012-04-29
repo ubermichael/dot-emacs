@@ -12,8 +12,8 @@
 
 (load "desktop")
 (desktop-save-mode 1)
-
-(setq desktop-path ".")
+(setq desktop-path (list "."))
+(setq desktop-save 'if-exists)
 
 ;; not all buffers should be reopened.
 (setq desktop-buffers-not-to-save

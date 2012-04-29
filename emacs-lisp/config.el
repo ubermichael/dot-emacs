@@ -5,7 +5,6 @@
 
 (setq user-full-name "Michael S. Joyce")
 (setq user-mail-address "michael@negativespace.net")
-(setq default-directory "~/Documents/" )
 
 ;; UNICODE.
 (set-terminal-coding-system 'utf-8)

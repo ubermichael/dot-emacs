@@ -1,19 +1,11 @@
 ;;; Dot-emacs.el ---
 
 (global-set-key "\C-c\C-u" 'eval-current-buffer)
-;; (require 'mac-key-mode)
-;; (mac-key-mode 1)
-
 (setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
-
-(if (string= (expand-file-name ".") "/Users/michael/Documents/dotemacs")
-    (progn (setq load-path  (cons (expand-file-name ".") load-path))
-           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-lisp") load-path))
-           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-local") load-path))
-           (setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-templates") load-path)))
-  (progn (setq load-path (cons (expand-file-name "~/.emacs-lisp") load-path))
-         (setq load-path (cons (expand-file-name "~/.emacs-local") load-path))
-         (setq load-path (cons (expand-file-name "~/.emacs-templates") load-path))))
+(setq load-path  (cons (expand-file-name ".") load-path))
+(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-lisp") load-path))
+(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-local") load-path))
+(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-templates") load-path))
 
 (load "auto-modes")
 (load "config")
@@ -33,8 +25,8 @@
 (load "lorem-ipsum")
 ;(load "lua-mode")
 ;(load "maxframe")
-(load "nxhtml/nxhtml-autoload")
 (load "nxml/rng-auto")
+(load "nxhtml/nxhtml-autoload")
 ;(load "pabbrev")
 ;(load "rnc-mode")
 ;(load "scss-mode")
