@@ -70,6 +70,16 @@
   (setq s-remove-first-completion 't)
   (switch-to-buffer (read-buffer "Switch to buffer: " (other-buffer))))
 
+;; ASCII table, in a new buffer.
+;; TODO: make it a real table.
+(defun ascii-table ()
+  "Print the ascii table. Based on a defun by Alex Schroeder <asc@bsiag.com>"
+  (interactive)  (switch-to-buffer "*ASCII*")  (erase-buffer)
+  (insert (format "ASCII characters up to number %d.\n" 254))  (let ((i 0))
+    (while (< i 254)      (setq i (+ i 1))
+      (insert (format "%4d %c\n" i i))))  (beginning-of-buffer))
+
+
 ;; --------------------------------------------------
 ;; http://www.emacswiki.org/cgi-bin/wiki/RenumberList
 ;; renumber paragraph, starting from point

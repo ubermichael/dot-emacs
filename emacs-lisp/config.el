@@ -7,16 +7,25 @@
 (setq user-mail-address "michael@negativespace.net")
 (setq default-directory "~/Documents/" )
 
+;; UNICODE.
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
 ;; highlighting
 (show-paren-mode t)
 (transient-mark-mode t)
 (blink-cursor-mode -1)
+
+;; automatically edit compressed files.
+(auto-compression-mode t)
 
 ;; don't open new frames -- doesn't work.
 (setq one-buffer-one-frame-mode t)
 
 ;; Don't add new lines to the end of a file when using down-arrow key 
 (setq next-line-add-newlines nil) 
+(setq require-final-newline t)
 
 ;; Dont show the GNU splash screen 
 (setq inhibit-startup-message t) 
@@ -49,11 +58,8 @@
 
 ;; things to ingnore, cause emacs doesn't edit them
 (setq completion-ignored-extensions 
-	  '(
-		"~" ".aux" ".a" ".bbl" ".blg" ".dvi" ".elc" ".svn"
-		".hc" ".hi" ".log" ".mlc" ".o" ".toc" ".pdf" ".class"
-		)
-	  )
+	  '("~" ".aux" ".a" ".bbl" ".blg" ".dvi" ".elc" ".svn"
+      ".hc" ".hi" ".log" ".mlc" ".o" ".toc" ".pdf" ".class"))
 
 (setq make-backup-files nil) ; Don't want any backup files 
 (setq auto-save-list-file-name nil) ; Don't want any .saves files 

@@ -22,6 +22,7 @@
 ;; mode-hooks AFTER global-keys: don't blow away the local-set-keys
 (load "mode-hooks")
 (load "autoinsert-config")
+(load "msj-desktop")
 
 ; -------------------------------------
 ; locally installed emacs modes.

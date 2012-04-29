@@ -60,5 +60,11 @@
 (global-set-key [home] 'beginning-of-line)
 (global-set-key [end] 'end-of-line)
 
+;;
+;; (global-set-key [(meta right)] 'forward-word)
+;; (global-set-key [(meta left)] 'backward-word)
+(global-set-key [(control home)] 'beginning-of-buffer)
+(global-set-key [(control end)] 'end-of-buffer)
+
 ;;; global-keys.el ends here
 (provide 'global-keys)
