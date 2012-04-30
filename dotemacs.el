@@ -3,9 +3,9 @@
 (global-set-key "\C-c\C-u" 'eval-current-buffer)
 (setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
 (setq load-path  (cons (expand-file-name ".") load-path))
-(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-lisp") load-path))
-(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-local") load-path))
-(setq load-path  (cons (expand-file-name "/Users/michael/Documents/dotemacs/emacs-templates") load-path))
+(setq load-path  (cons (expand-file-name "/home/xbmc/Documents/dotemacs/emacs-lisp") load-path))
+(setq load-path  (cons (expand-file-name "/home/xbmc/Documents/dotemacs/emacs-local") load-path))
+(setq load-path  (cons (expand-file-name "/home/xbmc/Documents/dotemacs/emacs-templates") load-path))
 
 (load "auto-modes")
 (load "config")

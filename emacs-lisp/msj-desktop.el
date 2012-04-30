@@ -14,6 +14,7 @@
 (desktop-save-mode 1)
 (setq desktop-path (list "."))
 (setq desktop-save 'if-exists)
+(setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
 
 ;; not all buffers should be reopened.
 (setq desktop-buffers-not-to-save
