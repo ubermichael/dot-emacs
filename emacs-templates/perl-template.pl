@@ -1,5 +1,11 @@
 #!/usr/local/bin/perl -CS
 
+=encoding utf8
+
+=head1 NAME
+
+=cut
+
 use 5.014;
 use utf8;
 use strict;
@@ -13,4 +19,3 @@ binmode(STDIN, ':encoding(utf-8)');
 binmode(STDOUT, ':encoding(utf-8)');
 
 use lib './lib';
-

@@ -11,6 +11,8 @@ binmode(STDIN, ':encoding(utf-8)');
 binmode(STDOUT, ':encoding(utf-8)');
 binmode(STDERR, ':encoding(utf-8)');
 
+=encoding utf8
+
 =head1 NAME
 
 =head1 VERSION
