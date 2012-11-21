@@ -50,6 +50,7 @@
 (setq menu-bar-mode nil)
 
 ;; allow f-b to expand to foo-bar
+(require 'complete)
 (partial-completion-mode 1)
 
 ;; Do only one line scrolling.
@@ -109,6 +110,14 @@
 	  '(lambda ()
 	     (ibuffer-auto-mode 1)))
 (add-to-list 'ibuffer-never-show-predicates "^\\*")
+
+; ------------------------------------- 
+; Make cperl mode suck less.
+; http://www.emacswiki.org/emacs/IndentingPerl
+; http://www.lemoda.net/emacs/customize-cperl/index.html
+(setq cperl-invalid-face nil)
+(setq cperl-invalid-face (quote off))
+(custom-set-variables '(cperl-indent-parens-as-block t))
 
 ; ------------------------------------- 
 
