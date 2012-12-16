@@ -1,11 +1,6 @@
-# $Id: Makefile 9 2010-04-30 18:25:55Z michael $
-# $Name:  $
-# Author: Michael S. Joyce <michael@negativespace.net>
-# Keywords: 
-
 HOME=/Users/michael
 EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
-OPTS=-avhP --exclude .svn
+OPTS=-avhP --exclude .git
 
 default: install
 
