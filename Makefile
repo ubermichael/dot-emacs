@@ -1,6 +1,6 @@
 HOME=/Users/michael
 EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
-OPTS=-avhP --exclude .git
+OPTS=-a --exclude .git
 
 default: install
 
