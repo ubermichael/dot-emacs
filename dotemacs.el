@@ -1,3 +1,4 @@
+;;; Michael's .emacs
 ;;; Dot-emacs.el ---
 
 (global-set-key "\C-c\C-u" 'eval-current-buffer)
