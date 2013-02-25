@@ -21,7 +21,6 @@
 ; -------------------------------------
 ; locally installed emacs modes.
 (load "ascii-table")
-; (load "css-mode")
 ; (load "drupal-mode")
 ;(load "find-recursive")
 (load "lorem-ipsum")
@@ -34,6 +33,7 @@
 ;(load "scss-mode")
 ;(load "sql-indent")
 (load "tt-mode")
+(load "less-css-mode")
 
 ;;; dot-emacs.el ends here
 (custom-set-variables
