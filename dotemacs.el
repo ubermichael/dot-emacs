@@ -37,7 +37,7 @@
 (load "nxhtml/nxhtml-autoload")
 ;(load "pabbrev")
 ;(load "rnc-mode")
-;(load "scss-mode")
+(load "scss-mode")
 ;(load "sql-indent")
 (load "tt-mode")
 (load "less-css-mode")

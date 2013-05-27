@@ -11,6 +11,15 @@
   (select-frame (make-frame '((width . 176) (height . 55)
                              (top . 0) (left . 0)))))
 
+; -------------------------------------
+; turn some lines of perl code into a
+; a Test::Class method.
+(defun refactor-test (subname)
+  "Change region into a subroutine"
+  (interactive "sSub name: ")
+  (shell-command-on-region
+   (point) (mark) (concatenate 'string "~/bin/refactor-test.pl" " '" subname "'") t))
+
 ;; --------------------------------------------------
 (defun insert-date ()
   "Insert date at point."

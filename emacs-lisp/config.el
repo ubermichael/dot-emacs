@@ -6,6 +6,9 @@
 (setq user-full-name "Michael S. Joyce")
 (setq user-mail-address "michael@negativespace.net")
 
+;; ONLY ONE FRAME. EVER. SHUT UP. ONE FRAME.
+(setq ns-pop-up-frames nil)
+
 ;; UNICODE.
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)

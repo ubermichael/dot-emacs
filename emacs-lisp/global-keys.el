@@ -20,6 +20,9 @@
 (global-set-key [(alt r)] 'replace-regexp)
 ;; end of mac specific stuff.
 
+;; make refactor-test a key combo.
+(global-set-key "\C-\\" 'refactor-test)
+
 ;; make a mouse click do something useful.
 (global-set-key "\M-r" 'yank)
 
