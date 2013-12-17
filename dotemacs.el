@@ -58,7 +58,20 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:stipple nil :background "DarkSlateGrey" :foreground "Wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 116 :width normal :family "apple-andale mono"))))
+ '(default ((t (
+                :stipple nil
+                         :background "DarkSlateGrey"
+                         :foreground "Wheat"
+                         :inverse-video nil
+                         :box nil
+                         :strike-through nil
+                         :overline nil
+                         :underline nil
+                         :slant normal
+                         :weight normal
+                         :height 130
+                         :width normal
+                         :family "apple-andale mono"))))
  '(cperl-array-face ((((class color) (background dark)) (:foreground "yellow"))))
  '(cperl-hash-face ((((class color) (background dark)) (:foreground "Pink"))))
  '(cursor ((t (:background "Wheat")))))
