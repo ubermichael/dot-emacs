@@ -1,4 +1,3 @@
-HOME=/Users/michael
 EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 OPTS=-av --exclude .git
 
