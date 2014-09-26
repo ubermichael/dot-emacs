@@ -1,1 +1,8 @@
+# editor position.
 .emacs.desktop
+
+# compiled
+*.elc
+
+# packaged
+.cask

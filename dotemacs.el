@@ -42,6 +42,9 @@
 (load "tt-mode")
 (load "less-css-mode")
 
+; ------------------------------------- 
+(autoload 'rtf-mode "rtf-mode" "RTF mode" t)
+
 ;;; dot-emacs.el ends here
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
