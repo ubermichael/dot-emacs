@@ -11,6 +11,14 @@
   (select-frame (make-frame '((width . 176) (height . 55)
                              (top . 0) (left . 0)))))
 
+; ------------------------------------- 
+; reformat XML
+(defun xmllint()
+  "Run xmllint --format on a buffer"
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)))
+
 ; -------------------------------------
 ; turn some lines of perl code into a
 ; a Test::Class method.
