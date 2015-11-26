@@ -20,6 +20,7 @@
         (cons "\\.xmap$" 'nxml-mode)
 	(cons "\\.t$"    'cperl-mode)
         (cons "\\.rtf$"  'rtf-mode)
+        (cons "\\.md$"   'markdown-mode)
         )
        auto-mode-alist))
 (defalias 'perl-mode 'cperl-mode)

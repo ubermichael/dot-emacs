@@ -41,6 +41,12 @@
 ;(load "sql-indent")
 (load "tt-mode")
 (load "less-css-mode")
+(load "markdown-mode")
+(load "web-mode")
+
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
 
 ; ------------------------------------- 
 (autoload 'rtf-mode "rtf-mode" "RTF mode" t)
