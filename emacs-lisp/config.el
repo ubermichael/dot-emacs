@@ -19,7 +19,7 @@
 (transient-mark-mode t)
 (blink-cursor-mode -1)
 
-;; automatically edit compressed files.
+;; autombatically edit compressed files.
 (auto-compression-mode t)
 
 ;; don't open new frames -- doesn't work.
@@ -52,17 +52,18 @@
 ;; turn off the stupid menu bar thingy.
 (setq menu-bar-mode nil)
 
-;; allow f-b to expand to foo-bar
-(require 'complete)
-(partial-completion-mode 1)
-
 ;; Do only one line scrolling.
 (setq scroll-step 1)
 
 ;; things to ingnore, cause emacs doesn't edit them
 (setq completion-ignored-extensions 
-	  '("~" ".aux" ".a" ".bbl" ".blg" ".dvi" ".elc" ".svn"
+	  '("~" ".aux" ".a" ".bbl" ".blg" ".dvi" ".elc" ".svn/" ".git/"
       ".hc" ".hi" ".log" ".mlc" ".o" ".toc" ".pdf" ".class"))
+
+(setq read-file-name-completion-ignore-case t)
+(setq read-buffer-completion-ignore-case t)
+(setq completion-cycle-threshold 5)
+(add-to-list 'completion-styles 'substring)
 
 (setq make-backup-files nil) ; Don't want any backup files 
 (setq auto-save-list-file-name nil) ; Don't want any .saves files 
@@ -72,7 +73,8 @@
 (setq view-read-only t)
 
 ;; iswitchhb - change buffer switching
-(iswitchb-mode 1)
+; obsolete
+; (iswitchb-mode 1)
 
 ;; --------------------------------------------------
 

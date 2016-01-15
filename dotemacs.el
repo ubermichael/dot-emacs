@@ -28,7 +28,7 @@
 ; -------------------------------------
 ; locally installed emacs modes.
 (load "ascii-table")
-; (load "drupal-mode")
+;(load "drupal-mode")
 ;(load "find-recursive")
 (load "lorem-ipsum")
 ;(load "lua-mode")
@@ -40,7 +40,7 @@
 (load "scss-mode")
 ;(load "sql-indent")
 (load "tt-mode")
-(load "less-css-mode")
+;(load "less-css-mode")
 (load "markdown-mode")
 (load "web-mode")
 
