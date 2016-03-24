@@ -13,8 +13,5 @@
 
 (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
-(eval-after-load "sql"
-      (load-library "sql-indent"))
-
 ;;; mode-hooks.el ends here
 (provide 'mode-hooks.el)

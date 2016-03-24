@@ -7,10 +7,7 @@ install:
 	cp dotemacs.el	 			$(HOME)/.emacs
 
 	mkdir -p $(HOME)/.emacs-lisp
-	rsync $(OPTS)  emacs-lisp/ 			$(HOME)/.emacs-lisp/
-
-	mkdir -p $(HOME)/.emacs-local
-	rsync $(OPTS)	 emacs-local/* 		$(HOME)/.emacs-local/
+	rsync $(OPTS)  emacs-lisp/		$(HOME)/.emacs-lisp/
 
 	mkdir -p $(HOME)/.emacs-templates
 	rsync $(OPTS)  emacs-templates/* 	$(HOME)/.emacs-templates/
@@ -21,6 +18,5 @@ test: clean
 clean:
 	rm -f *~
 	rm -f emacs-lisp/*~
-	rm -f emacs-local/*~
 	rm -f emacs-templates/*~
 
