@@ -19,15 +19,6 @@
   (save-excursion
     (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)))
 
-; -------------------------------------
-; turn some lines of perl code into a
-; a Test::Class method.
-(defun refactor-test (subname)
-  "Change region into a subroutine"
-  (interactive "sSub name: ")
-  (shell-command-on-region
-   (point) (mark) (concatenate 'string "~/bin/refactor-test.pl" " '" subname "'") t))
-
 ;; --------------------------------------------------
 (defun insert-date ()
   "Insert date at point."
@@ -62,18 +53,6 @@
   (interactive)
   (goto-char (point-min))
   (while (search-forward "\n" nil t) (replace-match "\r\n")))
-
-(defun open-dot-emacs () 
-  "opening-dot-emacs" 
-  (interactive)				   ;this makes the function a command too 
-  (find-file "~/.emacs" ))
-
-(defun eval-dot-emacs () 
-  "re-evaluating-dot-emacs"
-  (interactive)
-  (find-file "~/.emacs")
-  (eval-buffer ".emacs")
-  (kill-buffer ".emacs"))
 
 (defun back-to-indentation-or-beginning ()
   (interactive)

@@ -9,9 +9,6 @@ install:
 	mkdir -p $(HOME)/.emacs-lisp
 	rsync $(OPTS)  emacs-lisp/		$(HOME)/.emacs-lisp/
 
-	mkdir -p $(HOME)/.emacs-templates
-	rsync $(OPTS)  emacs-templates/* 	$(HOME)/.emacs-templates/
-
 test: clean 
 	$(EMACS) -q -l dotemacs.el &
 

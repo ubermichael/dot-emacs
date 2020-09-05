@@ -4,46 +4,48 @@
 
 (global-set-key "\C-c\C-u" 'eval-buffer)
 (setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
+(setq load-path  (cons "/usr/local/share/emacs/site-lisp" load-path))
 ;;; (setq load-path  (cons (expand-file-name ".") load-path))
 
 (if (string= (expand-file-name ".") "/Users/michael/Documents/dot-emacs")
     (progn
-      (setq load-path  (cons (expand-file-name "~/Documents/dot-emacs/emacs-lisp") load-path))
-      (setq load-path  (cons (expand-file-name "~/Documents/dot-emacs/emacs-templates") load-path)))
+      (setq load-path  (cons (expand-file-name "~/Documents/dot-emacs/emacs-lisp") load-path)))
     (progn
-      (setq load-path  (cons (expand-file-name "~/.emacs-lisp") load-path))
-      (setq load-path  (cons (expand-file-name "~/.emacs-templates") load-path))))
+      (setq load-path  (cons (expand-file-name "~/.emacs-lisp") load-path))))
   
-(load "auto-modes")
 (load "config")
 (load "custom-functions")
 (load "global-keys")
-;; mode-hooks AFTER global-keys: don't blow away the local-set-keys
-(load "mode-hooks")
-(load "autoinsert-config")
-(load "msj-desktop")
 
 ; ------------------------------------- 
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("auto-complete-nxml"))
-(add-to-list 'package-archives '("drupal-mode"))
-(add-to-list 'package-archives '("less-css-mode"))
-(add-to-list 'package-archives '("lorem-ipsum"))
-(add-to-list 'package-archives '("lua-mode"))
-(add-to-list 'package-archives '("markdown-mode"))
-(add-to-list 'package-archives '("maxframe"))
-(add-to-list 'package-archives '("multi-web-mode"))
-(add-to-list 'package-archives '("rnc-mode"))
-(add-to-list 'package-archives '("scss-mode"))
-(add-to-list 'package-archives '("sql-indent"))
-(add-to-list 'package-archives '("tt-mode"))
-(add-to-list 'package-archives '("web-mode"))
+; (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t) 
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+
 (package-initialize)
 
+(when (not package-archive-contents)
+    (package-refresh-contents))
+
+(defvar my-packages
+  '(php-mode
+    scss-mode
+    less-css-mode
+    js2-mode
+    jdee
+    ejson-mode
+    yaml-mode
+    )
+  )
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 ;;; dot-emacs.el ends here
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

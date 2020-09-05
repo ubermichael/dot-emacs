@@ -10,6 +10,7 @@
 (setq ns-pop-up-frames nil)
 
 ;; UNICODE.
+(set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
@@ -72,10 +73,6 @@
 ;; of course I want to view a read only file.
 (setq view-read-only t)
 
-;; iswitchhb - change buffer switching
-; obsolete
-; (iswitchb-mode 1)
-
 ;; --------------------------------------------------
 
 ;; enable javascript mode
@@ -85,9 +82,6 @@
 ;; Give me colours in major editing modes!!!!!
 (require 'font-lock)
 (global-font-lock-mode t) 
-
-;; make sure that spaces are used instead of tabs which bork xslt
-(custom-set-variables '(indent-tabs-mode nil))
 
 ;; Set the variable default-tab-width.
 (setq tab-width 2)
@@ -100,10 +94,6 @@
 (defadvice split-window-horizontally
   (after my-window-splitting-advice first () activate)
   (set-window-buffer (next-window) (other-buffer)))
-
-(defun yes-or-no-p (arg) 
-  "An alias for y-or-n-p, because I hate having to type 'yes' or 'no'." 
-  (y-or-n-p arg))
 
 ; -------------------------------------
 

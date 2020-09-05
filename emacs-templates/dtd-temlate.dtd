@@ -1,9 +1,0 @@
-<!-- $Id: dtd-temlate.dtd 6 2010-04-30 18:15:53Z michael $ -->
-
-<!ELEMENT element (child? | #PCDATA)>
-<!ATTLIST element
-          id      ID     #implied>
-
-
-
-          
