@@ -3,6 +3,7 @@
 ;;; Dot-emacs.el ---
 
 (global-set-key "\C-c\C-u" 'eval-buffer)
+(setq load-path  (cons "/opt/homebrew/share/emacs/site-lisp" load-path))
 (setq load-path  (cons "/usr/share/emacs/site-lisp" load-path))
 (setq load-path  (cons "/usr/local/share/emacs/site-lisp" load-path))
 ;;; (setq load-path  (cons (expand-file-name ".") load-path))
@@ -37,12 +38,16 @@
     jdee
     ejson-mode
     yaml-mode
+    web-mode
     )
   )
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(add-to-list 'auto-mode-alist '("\\.html\\.twig\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;;; dot-emacs.el ends here
 
