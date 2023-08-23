@@ -48,7 +48,6 @@
 (display-time)
 (line-number-mode 1)
 (setq column-number-mode t) 
-(which-func-mode t) 
 
 ;; turn off the stupid menu bar thingy.
 (setq menu-bar-mode nil)
